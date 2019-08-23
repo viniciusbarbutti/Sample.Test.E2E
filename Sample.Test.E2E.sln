@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29209.62
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sample.Test.E2E.Run", "Sample.Test.E2E.Run\Sample.Test.E2E.Run.csproj", "{A0DC2A8A-74F4-4682-9175-7F7FDA5A361E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample.Test.E2E.Core", "Sample.Test.E2E.Core\Sample.Test.E2E.Core.csproj", "{8A8294BB-1998-4FB0-8ED4-EBE1B61B9E08}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A0DC2A8A-74F4-4682-9175-7F7FDA5A361E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0DC2A8A-74F4-4682-9175-7F7FDA5A361E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0DC2A8A-74F4-4682-9175-7F7FDA5A361E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0DC2A8A-74F4-4682-9175-7F7FDA5A361E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A8294BB-1998-4FB0-8ED4-EBE1B61B9E08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A8294BB-1998-4FB0-8ED4-EBE1B61B9E08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A8294BB-1998-4FB0-8ED4-EBE1B61B9E08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A8294BB-1998-4FB0-8ED4-EBE1B61B9E08}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {09A44E7B-EB6C-4398-AC6E-2208D48AC3A3}
+	EndGlobalSection
+EndGlobal
