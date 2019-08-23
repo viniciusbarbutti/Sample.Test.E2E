@@ -9,8 +9,8 @@
   <ItemGroup>
     <PackageReference Include="FluentAssertions" Version="5.8.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.0.1" />
-    <PackageReference Include="MSTest.TestAdapter" Version="1.4.0" />
-    <PackageReference Include="MSTest.TestFramework" Version="1.4.0" />
+    <PackageReference Include="xunit" Version="2.4.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
     <PackageReference Include="SpecFlow" Version="3.0.225" />
     <PackageReference Include="SpecFlow.Tools.MsBuild.Generation" Version="3.0.225" />
     <PackageReference Include="SpecRun.SpecFlow" Version="3.0.377" />
@@ -18,6 +18,22 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Sample.Test.E2E.Core\Sample.Test.E2E.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Features\Limit.feature.cs">
+      <Visible>true</Visible>
+      <DependentUpon>%(Filename)</DependentUpon>
+      <DesignTime>true</DesignTime>
+      <AutoGen>true</AutoGen>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Features\Limit.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </None>
   </ItemGroup>
 
 </Project>
