@@ -1,12 +1,12 @@
 ﻿using Newtonsoft.Json;
-using Sample.Test.E2E.Core.Entities;
-using Sample.Test.E2E.Core.Models;
+using Sample.Test.E2E.Core.API.Repositories.Parameters;
+using Sample.Test.E2E.Core.API.Repositories.Models;
 using Sample.Test.E2E.Core.Utils;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 
-namespace Sample.Test.E2E.Core.Repositories
+namespace Sample.Test.E2E.Core.API.Repositories
 {
     public class InvestmentRepository
     {

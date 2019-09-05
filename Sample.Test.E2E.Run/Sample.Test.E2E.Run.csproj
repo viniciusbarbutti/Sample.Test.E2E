@@ -21,9 +21,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Features\Limit.feature.cs">
+    <Compile Update="Features\LimiteCarteira.feature.cs">
       <Visible>true</Visible>
-      <DependentUpon>%(Filename)</DependentUpon>
+      <DependentUpon>LimiteCarteira.feature</DependentUpon>
       <DesignTime>true</DesignTime>
       <AutoGen>true</AutoGen>
     </Compile>

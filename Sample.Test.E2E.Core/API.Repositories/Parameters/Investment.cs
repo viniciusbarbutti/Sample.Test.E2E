@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace Sample.Test.E2E.Core.Entities
+namespace Sample.Test.E2E.Core.API.Repositories.Parameters
 {
     public class Investment
     {

@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Sample.Test.E2E.Core.Entities
+namespace Sample.Test.E2E.Core.API.Repositories.Parameters
 {
     public class Limit
     {

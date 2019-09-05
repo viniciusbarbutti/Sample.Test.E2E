@@ -17,20 +17,20 @@ namespace Sample.Test.E2E.Run.Features
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.0.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [TechTalk.SpecRun.FeatureAttribute("Limite", SourceFile="Features\\Limit.feature", SourceLine=2)]
-    public partial class LimiteFeature
+    [TechTalk.SpecRun.FeatureAttribute("Limite Carteira", SourceFile="Features\\LimiteCarteira.feature", SourceLine=2)]
+    public partial class LimiteCarteiraFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "Limit.feature"
+#line 1 "LimiteCarteira.feature"
 #line hidden
         
         [TechTalk.SpecRun.FeatureInitialize()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("pt-br"), "Limite", null, ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("pt-br"), "Limite Carteira", null, ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -66,19 +66,23 @@ namespace Sample.Test.E2E.Run.Features
             testRunner.CollectScenarioErrors();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Alteracao do limite do usuario ao realizar uma operacao financeira", SourceLine=4)]
-        public virtual void AlteracaoDoLimiteDoUsuarioAoRealizarUmaOperacaoFinanceira()
+        [TechTalk.SpecRun.ScenarioAttribute("Alteracao do limite carteira do usuario ao realizar uma operacao de venda de ativ" +
+            "o", new string[] {
+                "cenario1"}, SourceLine=5)]
+        public virtual void AlteracaoDoLimiteCarteiraDoUsuarioAoRealizarUmaOperacaoDeVendaDeAtivo()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Alteracao do limite do usuario ao realizar uma operacao financeira", null, ((string[])(null)));
-#line 5
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Alteracao do limite carteira do usuario ao realizar uma operacao de venda de ativ" +
+                    "o", null, new string[] {
+                        "cenario1"});
+#line 6
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 6
- testRunner.Given("que possua um limite inicial de \"500000\" reais", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Dado ");
 #line 7
- testRunner.When("realizo uma operacao financeira de \"1000000\" reais", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Quando ");
+ testRunner.Given("que eu possua um limite carteira de \"50000\" reais", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Dado ");
 #line 8
- testRunner.Then("o meu novo limite deve ser \"1500000\" reais", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Entao ");
+ testRunner.When("eu realizar uma operacao de venda do valor de \"10000\" reais", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Quando ");
+#line 9
+ testRunner.Then("o meu novo limite carteira deve ser \"40000\" reais", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Entao ");
 #line hidden
             this.ScenarioCleanup();
         }

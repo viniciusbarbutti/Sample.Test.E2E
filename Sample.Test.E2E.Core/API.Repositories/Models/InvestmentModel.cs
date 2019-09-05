@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Sample.Test.E2E.Core.Models
+namespace Sample.Test.E2E.Core.API.Repositories.Models
 {
     public class InvestmentModel
     {
