@@ -17,25 +17,30 @@ namespace Sample.Test.E2E.Run.Features
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.0.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [TechTalk.SpecRun.FeatureAttribute("Limite Carteira", SourceFile="Features\\LimiteCarteira.feature", SourceLine=2)]
-    public partial class LimiteCarteiraFeature
+    public partial class LimiteCarteiraFeature : Xunit.IClassFixture<LimiteCarteiraFeature.FixtureData>, System.IDisposable
     {
         
-        private TechTalk.SpecFlow.ITestRunner testRunner;
+        private static TechTalk.SpecFlow.ITestRunner testRunner;
+        
+        private Xunit.Abstractions.ITestOutputHelper _testOutputHelper;
         
 #line 1 "LimiteCarteira.feature"
 #line hidden
         
-        [TechTalk.SpecRun.FeatureInitialize()]
-        public virtual void FeatureSetup()
+        public LimiteCarteiraFeature(LimiteCarteiraFeature.FixtureData fixtureData, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
+        {
+            this._testOutputHelper = testOutputHelper;
+            this.TestInitialize();
+        }
+        
+        public static void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
             TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("pt-br"), "Limite Carteira", null, ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
-        [TechTalk.SpecRun.FeatureCleanup()]
-        public virtual void FeatureTearDown()
+        public static void FeatureTearDown()
         {
             testRunner.OnFeatureEnd();
             testRunner = null;
@@ -45,7 +50,6 @@ namespace Sample.Test.E2E.Run.Features
         {
         }
         
-        [TechTalk.SpecRun.ScenarioCleanup()]
         public virtual void ScenarioTearDown()
         {
             testRunner.OnScenarioEnd();
@@ -54,6 +58,7 @@ namespace Sample.Test.E2E.Run.Features
         public virtual void ScenarioInitialize(TechTalk.SpecFlow.ScenarioInfo scenarioInfo)
         {
             testRunner.OnScenarioInitialize(scenarioInfo);
+            testRunner.ScenarioContext.ScenarioContainer.RegisterInstanceAs<Xunit.Abstractions.ITestOutputHelper>(_testOutputHelper);
         }
         
         public virtual void ScenarioStart()
@@ -66,9 +71,17 @@ namespace Sample.Test.E2E.Run.Features
             testRunner.CollectScenarioErrors();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Alteracao do limite carteira do usuario ao realizar uma operacao de venda de ativ" +
-            "o", new string[] {
-                "cenario1"}, SourceLine=5)]
+        void System.IDisposable.Dispose()
+        {
+            this.ScenarioTearDown();
+        }
+        
+        [Xunit.FactAttribute(DisplayName="Alteracao do limite carteira do usuario ao realizar uma operacao de venda de ativ" +
+            "o")]
+        [Xunit.TraitAttribute("FeatureTitle", "Limite Carteira")]
+        [Xunit.TraitAttribute("Description", "Alteracao do limite carteira do usuario ao realizar uma operacao de venda de ativ" +
+            "o")]
+        [Xunit.TraitAttribute("Category", "cenario1")]
         public virtual void AlteracaoDoLimiteCarteiraDoUsuarioAoRealizarUmaOperacaoDeVendaDeAtivo()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Alteracao do limite carteira do usuario ao realizar uma operacao de venda de ativ" +
@@ -87,10 +100,44 @@ this.ScenarioInitialize(scenarioInfo);
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.TestRunCleanup()]
-        public virtual void TestRunCleanup()
+        [Xunit.FactAttribute(DisplayName="Alteracao do limite carteira do usuario ao realizar uma operacao de venda de pass" +
+            "ivos")]
+        [Xunit.TraitAttribute("FeatureTitle", "Limite Carteira")]
+        [Xunit.TraitAttribute("Description", "Alteracao do limite carteira do usuario ao realizar uma operacao de venda de pass" +
+            "ivos")]
+        [Xunit.TraitAttribute("Category", "cenario2")]
+        public virtual void AlteracaoDoLimiteCarteiraDoUsuarioAoRealizarUmaOperacaoDeVendaDePassivos()
         {
-            TechTalk.SpecFlow.TestRunnerManager.GetTestRunner().OnTestRunEnd();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Alteracao do limite carteira do usuario ao realizar uma operacao de venda de pass" +
+                    "ivos", null, new string[] {
+                        "cenario2"});
+#line 12
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 13
+ testRunner.Given("que eu possua um limite carteira de \"50000\" reais", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Dado ");
+#line 14
+ testRunner.When("eu realizar uma operacao de venda do valor de \"10000\" reais", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Quando ");
+#line 15
+ testRunner.Then("o meu novo limite carteira deve ser \"4000\" reais", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Entao ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.0.0.0")]
+        [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        public class FixtureData : System.IDisposable
+        {
+            
+            public FixtureData()
+            {
+                LimiteCarteiraFeature.FeatureSetup();
+            }
+            
+            void System.IDisposable.Dispose()
+            {
+                LimiteCarteiraFeature.FeatureTearDown();
+            }
         }
     }
 }
